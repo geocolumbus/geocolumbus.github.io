@@ -19,7 +19,7 @@ What has hard was configuring the setup to redirect http requests to https so th
 
 ### Solution Diagram
 
-![_config.yml]({{ site.baseurl }}/images/Amazon_AWS_https_ELB_EC2_configuration.png)
+![_config.yml]({{ site.baseurl }}/images/amazon_aws_elb.png)
 
 ### Configuration Details
 
