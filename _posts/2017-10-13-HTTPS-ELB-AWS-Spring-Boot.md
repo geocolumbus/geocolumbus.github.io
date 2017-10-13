@@ -9,7 +9,7 @@ I didn't want to drop $1000 on a certificate, or even $5/mo. for the privilege, 
 
 ### Solution Diagram
 
-![_config.yml]({{ site.baseurl }}/images/Amazon\ AWS\ https\ ELB\ EC2\ configuration.png)
+![_config.yml]({{ site.baseurl }}/images/Amazon AWS https ELB EC2 configuration.png)
 
 ### Configuration Details
 
