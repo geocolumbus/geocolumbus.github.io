@@ -7,6 +7,16 @@ Even trivial websites are moving from HTTP to HTTPS these days, as Google has ma
 
 I didn't want to drop $1000 on a certificate, or even $5/mo. for the privilege, and I was already hosting my sites on Amazon EC2. I decided to leave my plain old web app running as an EC2 instance on port 80 and to hide it behind an Elastic Load Balancer handling the HTTPS task. I did have to transfer my domain name from GoDaddy to Amazon's Route 53 service for $12. Having the domain name inside the Amazon mothership made everything easy.
 
+### Help from Amazon
+
+Setting up a load balancer in front an Amazon EC2 instance is pretty simple. Amazon walks you through it.
+
+[Tutorial: Create a Classic Load Balancer](http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-getting-started.html)
+
+What is nice about this solution is that the instance runs on port 80 (or port 8080 or whatever) behind the load balancer. Furthermore, when setting up the load balancer, if you request port 443, Amazon will walk you through the process of obtaining a security certificate.
+
+What has hard was configuring the setup to redirect http requests to https so that all your old links would work and the site is still easy to find. I solved that by configuring the Spring Boot instance to detect http requests by watching the X-Forwarded-Proto header. If it contains http, Spring Boot will redirect to the same url, but with https. And Spring Boot does it automatically if you configure it properly.
+
 ### Solution Diagram
 
 ![_config.yml]({{ site.baseurl }}/images/Amazon_AWS_https_ELB_EC2_configuration.png)
