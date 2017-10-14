@@ -305,11 +305,9 @@ pre {
 }
 
 .about-image .left-image {
-  float:left;
+  float: left;
   width: 204px;
   border: thin solid gray;
-
-
 }
 
 .about-image .left-image .digby-image {
@@ -317,13 +315,21 @@ pre {
 }
 
 .about-image .right-text {
-  float:left;
+  float: left;
   width: calc (100% - 216px);
   margin-left: 10px;
 }
 
 /* iPhone Portrait */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .about-image .left-image {
+    clear: both;
+    margin-left: calc((100% - 204px) / 2);
+  }
+  .about-image .right-text {
+  clear:both;
+    width: 100%;
+  }
 }
 
 /* iPhone Landscape */
