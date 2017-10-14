@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I am a Web and Mobile Application Developer who lives in Worthington, Ohio. My professional focus is on library information systems. I've worked with Java, Spring, PhoneGap, Objective-C, node, etc. I spend a lot of my private time figuring out how Amazon AWS works. I think running a private data center is an expensive luxury that is on the way out except for a few, select edge cases.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+I like to take photographs and ride my bike to stave off middle aged developer bloat. My kids are very busy and need rides everywhere. We built a workshop shed and lately they've been modding nerf guns. My wife Kelly works on the data side of IT. We have cats.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[geocolumbus@gmail.com](mailto:geocolumbus@gmail.com)
