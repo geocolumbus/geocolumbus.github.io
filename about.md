@@ -4,11 +4,11 @@ title: About
 permalink: /about/
 ---
 
-<div>
-<div style="width: 106px; float:left; margin: 0 1em 6px 0; border: thin solid gray;">
-<img style="width: 100px;" src="/images/Digby-by-OCLC.png" />
+<div class="about-image">
+<div class="left-image">
+    <img class="digby-image" />
 </div>
-<div style="float:left; width: 200px">
+<div class="right-text">
 I am a Web and Mobile Application developer who lives in Worthington, Ohio. My professional focus is on library information systems. I've worked with Java, Spring, PhoneGap, Objective-C, Android Java, IntelliJ IDE's, JIRA, node (and all that implies), etc.
 
 The latest mobile app I contributed to was released to the App Stores in August, 2017. OCLC's Digby is a staff application for OCLC's [Worldshare Management Services](https://www.oclc.org/en/worldshare-management-services.html) and was written using the PhoneGap framework. In October, 2017 I attended PhoneGap Day in the New York City offices of Microsoft. At OCLC, I've also had a hand in the [API Explorer](https://platform.worldcat.org/api-explorer/apis) which is a tool for trying API's on the [OCLC Developer Network](https://www.oclc.org/developer/home.en.html).
