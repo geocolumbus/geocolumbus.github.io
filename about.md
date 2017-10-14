@@ -12,9 +12,11 @@ I like to take photographs and ride my bike to stave off middle aged developer b
 
 I'm interested in building things with Raspberry Pi's.
 
-* www.traincounter.com has been running on an RPi 2 for 3 years now. Read more about it at the [git repo](https://github.com/geocolumbus/traindetector).
+* [www.traincounter.com](www.traincounter.com) has been running on an RPi 2 for 3 years now. Read more about it at the [git repo](https://github.com/geocolumbus/traindetector).
 
-I build enterprise Spring Boot apps for practice. This odd bird is a news compresser. I use it all the time personally to keep up. www.compressednews.com. See the [git repo](https://github.com/geocolumbus/linkgrabber) too.
+I build enterprise Spring Boot apps for practice. This app gathers developer news and compresses it down so I can cover a lot of ground fast.
+
+* [www.compressednews.com](www.compressednews.com) is another long term project. See the [git repo](https://github.com/geocolumbus/linkgrabber) for more info.
 
 ### Contact me
 
