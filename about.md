@@ -12,9 +12,9 @@ I'm interested in building things with Raspberry Pi's.
 
 * [www.traincounter.com](www.traincounter.com) has been running on an RPi 2 for 3 years now. Read more about it at the [git repo](https://github.com/geocolumbus/traindetector).
 
-I build enterprise Spring Boot apps for practice. This app gathers developer news and compresses it down so I can cover a lot of ground fast.
+I build enterprise Spring Boot apps for practice.
 
-* [www.compressednews.com](www.compressednews.com) is another long term project. See the [git repo](https://github.com/geocolumbus/linkgrabber) for more info.
+* [www.compressednews.com](www.compressednews.com) gathers developer news and compresses it down so I can stay current - efficiently. See the [git repo](https://github.com/geocolumbus/linkgrabber) for more info.
 
 ### More Information
 
