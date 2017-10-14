@@ -14,9 +14,7 @@ I'm interested in building things with Raspberry Pi's.
 
 * [www.traincounter.com](www.traincounter.com) has been running on an RPi 2 for 3 years now. Read more about it at the [git repo](https://github.com/geocolumbus/traindetector).
 
-Here's my Hadoop cluster.
-
-Sometimes I build enterprise Spring Boot apps for practice.
+I build enterprise Spring Boot apps for practice, for example:
 
 * [www.compressednews.com](www.compressednews.com) gathers developer news and compresses it down so I can stay current - efficiently. See the [git repo](https://github.com/geocolumbus/linkgrabber) for more info.
 
