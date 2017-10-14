@@ -6,12 +6,12 @@ permalink: /about/
 
 <div class="about-image">
 <div class="left-image">
-    <img class="digby-image" />
+    <img src="/images/Digby-by-OCLC.png" class="digby-image" />
 </div>
 <div class="right-text">
 I am a Web and Mobile Application developer who lives in Worthington, Ohio. My professional focus is on library information systems. I've worked with Java, Spring, PhoneGap, Objective-C, Android Java, IntelliJ IDE's, JIRA, node (and all that implies), etc.
 
-The latest mobile app I contributed to was released to the App Stores in August, 2017. OCLC's Digby is a staff application for OCLC's [Worldshare Management Services](https://www.oclc.org/en/worldshare-management-services.html) and was written using the PhoneGap framework. In October, 2017 I attended PhoneGap Day in the New York City offices of Microsoft. At OCLC, I've also had a hand in the [API Explorer](https://platform.worldcat.org/api-explorer/apis) which is a tool for trying API's on the [OCLC Developer Network](https://www.oclc.org/developer/home.en.html).
+The latest mobile app I contributed to was released to the App Stores in August, 2017. OCLC's Digby is a staff application for OCLC's <a href="https://www.oclc.org/en/worldshare-management-services.html">Worldshare Management Services</a> and was written using the PhoneGap framework. In October, 2017 I attended PhoneGap Day in the New York City offices of Microsoft.<br><br>At OCLC, I've also had a hand in the <a href="https://platform.worldcat.org/api-explorer/apis">API Explorer</a> which is a tool for trying API's on the <a href="https://www.oclc.org/developer/home.en.html">OCLC Developer Network</a>.
 </div>
 </div>
 I'm interested in building things with Raspberry Pi's.
