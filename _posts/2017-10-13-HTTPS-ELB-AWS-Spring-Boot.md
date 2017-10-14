@@ -4,7 +4,6 @@ title: 'Configure a Spring Boot app for HTTPS on Amazon AWS.'
 date: '2016-10-14 12:15 -04:00'
 author: george
 categories: https
-
 ---
 
 Even trivial websites are moving from HTTP to HTTPS these days, as Google has made the deprecation of HTTP websites a corporate priority. Those of us who have had http websites for years are forced to deal with upgrading to https, and getting a certificate that works.
