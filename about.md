@@ -6,7 +6,7 @@ permalink: /about/
 
 I am a Web and Mobile Application developer who lives in Worthington, Ohio. My professional focus is on library information systems. I've worked with Java, Spring, PhoneGap, Objective-C, Android Java, IntelliJ IDE's, JIRA, node (and all that implies), etc.
 
-The latest mobile app I contributed to was released to the App Stores in August, 2017. OCLC's Digby is a staff application for OCLC's [Worldshare Management Services](https://www.oclc.org/en/worldshare-management-services.html) and was written using the PhoneGap framework.
+The latest mobile app I contributed to was released to the App Stores in August, 2017. OCLC's Digby ([Apple App Store](https://itunes.apple.com/us/app/digby-by-oclc/id1248373800?mt=8), [Google Play Store](https://play.google.com/store/apps/details?id=org.oclc.digby&hl=en) is a staff application for OCLC's [Worldshare Management Services](https://www.oclc.org/en/worldshare-management-services.html) and was written using the PhoneGap framework.
 
  At OCLC, I've also had a hand in the [API Explorer](https://platform.worldcat.org/api-explorer/apis) which is a tool for trying our Platform API's on the [OCLC Developer Network](https://www.oclc.org/developer/home.en.html).
 
