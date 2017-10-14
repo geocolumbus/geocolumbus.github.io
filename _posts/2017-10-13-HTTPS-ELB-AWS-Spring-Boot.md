@@ -25,12 +25,12 @@ What is nice about this solution is that the instance runs on port 80 (or port 8
 
 ![_config.yml]({{ site.baseurl }}/images/amazon_aws_elb.png)
 
-### It Worked, Sort Of
+### It Worked, Mostly
 
 After I got it all set up, I was in this state:
 
 * http://www.mydomain.com -> stayed http BOO!
-* https://www.mydomain.com -> encrypted YAY!
+* https://www.mydomain.com -> https YAY!
 
 What I wanted was all requests to go to https. If someone who has never visited your site before types "www.mydomain.com" into the browser, it defaults to http unless you do something about it on your end.
 
@@ -50,7 +50,7 @@ Add these configuration settings to application.properties file in the resources
 
 #### spring boot security class
 
-Obviously you are using Spring Security to secure your webapp. You have to add some properties to the configuration to get http -> https redirect working. Specifically, these settings:
+Obviously you are using Spring Security to secure your webapp. You have to add some properties to the configuration to get http -> https redirect working. Specifically, these settings to the [HttpSecurity class](https://docs.spring.io/spring-security/site/docs/current/apidocs/org/springframework/security/config/annotation/web/builders/HttpSecurity.html).
 
     .requiresChannel().anyRequest().requiresSecure()
 
@@ -97,4 +97,4 @@ Here is what the entire spring security configuration might look like:
 
 ### Conclusion
 
-With this configuration, if a person types www.mydomain.com or http://www.mydomain.com into the browser, they end up at https://www.mydomain.com. Even better, old links to my site still work. http://www.mydomain.com/very-important.pdf routes to https://www.mydomain.com/very-important.pdf. I did have to modify my Spring Boot app slightly, but it wasn't too intrusive. Good luck with your http to https conversion!
+With this configuration, if a person types www.mydomain.com or http://www.mydomain.com into the browser, they end up at https://www.mydomain.com. Even better, old links to my site still work. https links route to the identical https link. I did have to modify my Spring Boot app slightly, but it wasn't too difficult. Good luck with your http to https conversion!
