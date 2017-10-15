@@ -6,13 +6,23 @@ author: george
 categories: https
 ---
 
-Even trivial websites are moving from HTTP to HTTPS these days, as Google has made the deprecation of HTTP websites a corporate priority. Those of us who have had http websites for years are forced to deal with upgrading to https, and getting a certificate that works. I had Spring Boot apps running on Amazon EC-2 instances for years, and suddenly I had to convert them to https.
+Even trivial websites are moving from HTTP to HTTPS these days, as Google has made the deprecation of HTTP websites a corporate priority. Those of us who have had http websites for years are forced to deal with upgrading to https, and getting a certificate that works. I had Spring Boot apps running on Amazon EC-2 instances for years, and suddenly I needed to convert them to HTTPS. But how?
 
-Fortunately, Amazon AWS does the heavy lifting for you. You just leave your Spring Boot app running on port 80 on an EC-2 instance, and then put a load balancer in front of it to offer an encrypted https connection on port 443. You'll have to transfer your domain name from GoDaddy (or wherever it is) to Amazon Route 53. You need to have your domain registered with Amazon so you can hook it up to the load balancer.
+Fortunately, Amazon AWS does the heavy lifting for you. You just leave your Spring Boot app running on port 80 on an EC-2 instance, and then put a load balancer in front of it to offer an encrypted https connection on port 443. You'll have to transfer your domain name from GoDaddy (or wherever it is) to Amazon Route 53. You need to have your domain registered with Amazon so you can hook it up to the load balancer. The nice part is that Amazon will request and apply the security certificate right to the load balancer port.
 
-### Help from Amazon
+The steps are:
 
-Setting up a load balancer in front an Amazon EC2 instance is pretty simple. Amazon walks you through it.
+1. Get the app running on port 80 (or 8080) of on an EC-2 instance.
+2. Register or transfer a domain name to AWS Route 53
+3. Create a security group for the instance - open ports 22 and 80 (or 8080)
+4. Create a security group for the load balancer - open ports 80 and 443
+5. Configure Target Groups - link to the instance on port 80 (or 8080)
+6. Configure Load Balancer - link to the target group, intercept on ports 80 and 443 (when you select 443, you’ll kick off getting a security certificate)
+7. Make sure, at Route 53, that the DNS names from the Hosted Zones are set in the Registered Domains section.
+8. Configure the Spring Boot App to run securely, and redirect HTTP to HTTPS (discussed in detail below)
+9. Make sure that Port 80 of the instance is custom configured to only allow access from the Load Balancer’s security group.
+
+This tutorial from Amazon will help clarify.
 
 [Tutorial: Create a Classic Load Balancer](http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-getting-started.html)
 
@@ -22,7 +32,7 @@ What is nice about this solution is that the instance runs on port 80 (or port 8
 
 ![_config.yml]({{ site.baseurl }}/images/amazon_aws_elb.png)
 
-### It Worked, Mostly
+### Configure the Spring Boot App to run securely, and redirect HTTP to HTTPS
 
 After I got it all set up, I was in this state:
 
@@ -32,10 +42,6 @@ After I got it all set up, I was in this state:
 What I wanted was all requests to go to https. If someone who has never visited your site before types "www.mydomain.com" into the browser, it defaults to http unless you do something about it on your end.
 
 I discovered that an http request that came in to port 80 of the load balancer was routed to port 80 on the instance, and a https request that came in to port 443 of the load balancer was also routed to port 80 of the instance! What I wanted my Spring Boot App to do was to detect which requests were http and reroute them to the same URL, only with https. Happily, Spring Boot can do this because the load balancer adds an extra header to the request before passing it to the EC-2 instance, called X-Forwarded-Proto. It's value is either http or https, and with the proper configuration, Spring Boot will reroute http to https automagically!
-
-### Configuration Details
-
-The Spring Boot app needs some configuration to enable it to serve https requests and redirect http to https.
 
 #### Configure Spring Boot Properties
 
