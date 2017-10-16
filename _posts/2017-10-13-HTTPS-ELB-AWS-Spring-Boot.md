@@ -44,6 +44,8 @@ What I wanted was all requests to go to https. If someone who has never visited 
 
 I discovered that an http request that came in to port 80 of the load balancer was routed to port 80 on the instance, and a https request that came in to port 443 of the load balancer was also routed to port 80 of the instance! What I wanted my Spring Boot App to do was to detect which requests were http and reroute them to the same URL, only with https. Happily, Spring Boot can do this because the load balancer adds an extra header to the request before passing it to the EC-2 instance, called X-Forwarded-Proto. It's value is either http or https, and with the proper configuration, Spring Boot will reroute http to https automagically!
 
+See: Spring Boot Reference Guide - [82.3 Enable HTTPS when running behind a proxy server](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-enable-https)
+
 #### Configure Spring Boot Properties
 
 Add these configuration settings to the appropriate application.properties file in the resources folder.
