@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Configure a Spring Boot app for HTTPS on Amazon AWS.'
-date: '2016-10-14 12:15 -04:00'
+date: '2017-10-14 12:15 -04:00'
 author: george
 categories: https
 comments: true
