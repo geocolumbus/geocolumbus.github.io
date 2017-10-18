@@ -87,23 +87,23 @@ Note the use of unicode. Always good to tell maven you are using UTF-8 in the PO
 Then I wrote a test to see if my enumeration had it right. Assuming the deck is in order (and I'm writing a test, so this is the place to assume), then the 29th card in the deck should be the three of clubs.
 
 ```
-    package com.tallgeorge.playingcards.deck;
+package com.tallgeorge.playingcards.deck;
 
-    import org.junit.Test;
+import org.junit.Test;
 
-    import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
-    public class PlayingCardTest {
+public class PlayingCardTest {
 
-        @Test
-        public void cardIndexCorrect() {
-            PlayingCardEnum threeOfClubs = PlayingCardEnum.values()[28];
-            assertEquals("Card 28 has correct value", "three", threeOfClubs.getValue());
-            assertEquals("Card 28 has correct suite", "club", threeOfClubs.getSuite());
-            assertEquals("Card 28 has correct valueabbr", "3", threeOfClubs.getValueAbbr());
-            assertEquals("Card 28 has correct symbol", "3♣", threeOfClubs.getSymbol());
-        }
+    @Test
+    public void cardIndexCorrect() {
+        PlayingCardEnum threeOfClubs = PlayingCardEnum.values()[28];
+        assertEquals("Card 28 has correct value", "three", threeOfClubs.getValue());
+        assertEquals("Card 28 has correct suite", "club", threeOfClubs.getSuite());
+        assertEquals("Card 28 has correct valueabbr", "3", threeOfClubs.getValueAbbr());
+        assertEquals("Card 28 has correct symbol", "3♣", threeOfClubs.getSymbol());
     }
+}
 ```
 
 
