@@ -84,7 +84,7 @@ Anyway, I figured an enumerated card should have these useful properties so I ca
 
 Note the use of unicode. Always good to tell maven you are using UTF-8 in the POM file.
 
-Then I wrote a test to see if my enumeration had it right. Assuming the deck is in order (and I'm writing a test, so this is the place to assume), then the 28th card should be the three of clubs.
+Then I wrote a test to see if my enumeration had it right. Assuming the deck is in order (and I'm writing a test, so this is the place to assume), then the 29th card in the deck should be the three of clubs.
 
 ```
     package com.tallgeorge.playingcards.deck;
@@ -206,9 +206,9 @@ Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
 
 ```
 
-With java there's just a lot of drama when things go wrong. It couldn't even find the enum I specified in the test because I hadn't written it yet.
+With java there's just a lot of drama when things go wrong. It couldn't even find the enum PlayingCardEnum I specified in the test because I hadn't written it yet.
 
-So it was time to write the class to make it work.
+It was time to write the enum!
 
     package com.tallgeorge.playingcards.deck;
 
@@ -294,24 +294,17 @@ So it was time to write the class to make it work.
         private final String symbol;
 
         /**
-         * The index of the card.
-         */
-        private final int rank;
-
-        /**
          * A playing card.
          * @param value     a string representation of the value.
          * @param suite     a string representation of the suite.
          * @param valueAbbr a string representation of the value, shortened.
          * @param symbol    a string representation of the value, shortened and the symbol.
-         * @param rank      the integer index of the card.
          */
         PlayingCardEnum(String value, String suite, String valueAbbr, String symbol, int rank) {
             this.value = value;
             this.suite = suite;
             this.valueAbbr = valueAbbr;
             this.symbol = symbol;
-            this.rank = rank;
         }
 
         /**
@@ -344,14 +337,6 @@ So it was time to write the class to make it work.
          */
         public String getSymbol() {
             return symbol;
-        }
-
-        /**
-         * The index of the card.
-         * @return The unique index of each card.
-         */
-        public int getRank() {
-            return rank;
         }
 
         @Override
