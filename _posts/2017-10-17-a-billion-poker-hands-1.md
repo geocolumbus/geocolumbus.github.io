@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Playing card enum in Java'
-date: '2016-10-17 22:00 -04:00'
+date: '2017-10-17 22:00 -04:00'
 author: george
 categories: fun
 comments: true
