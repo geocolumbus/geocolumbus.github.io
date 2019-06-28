@@ -9,7 +9,7 @@ comments: true
 
 It's fun to just play with a language. Why be in this business if it isn't fun? So one day I wanted to make a Java enum. I thought - "a deck of cards is the perfect enum."
 
-I made a simple maven project.
+I made a simple maven project. The repo is here: https://github.com/geocolumbus/playingcards
 
     ├── README.md
     ├── pom.xml
