@@ -48,6 +48,11 @@ See: Spring Boot Reference Guide - [82.3 Enable HTTPS when running behind a prox
 
 #### Configure Spring Boot Properties
 
+--------
+New 9/2019 - You don't have to rely on your app to redirect http to https anymore. You can redirect the load balancer listener for port 80 to port 443 in the listener settings. You set the listener to port 443 to *direct* to the target group. You set the listener to port to *redirect* to port 443.
+
+--------
+
 Add these configuration settings to the appropriate application.properties file in the resources folder.
 
     security.require-ssl=true
